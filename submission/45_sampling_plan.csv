@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,,TODO,TODO
-front,hard,,TODO,TODO
-rear,normal,,TODO,TODO
-rear,hard,,TODO,TODO
-left,normal,,TODO,TODO
-left,hard,,TODO,TODO
-right,normal,,TODO,TODO
-right,hard,,TODO,TODO
+front,normal,30,"Khoảng cách vật thể thay đổi nhanh theo vận tốc di chuyển; bóng đổ cây cối và mặt đường","Giám sát mật độ giao thông đối diện và đánh giá độ ổn định của bounding box ở cự ly trung bình ban ngày"
+front,hard,35,"Chói sáng ngược nắng gay gắt (glare); mật độ người đi bộ và xe máy cắt ngang đầu xe dày đặc; vật thể bị che khuất một phần (occluded)","Camera trước chịu rủi ro va chạm trực diện cao nhất khi xe di chuyển; cần ưu tiên tỷ trọng ca khó cao nhất toàn bộ hệ thống"
+rear,normal,20,"Biến dạng quang học khi lùi; góc camera chúc thấp gần mặt đất","Đảm bảo độ chính xác cơ bản cho các tình huống lùi chuồng và đỗ xe thông thường ở bãi trống"
+rear,hard,25,"Ống kính bám bụi bẩn và bùn nước bắn từ bánh sau; vật cản thấp dưới cản xe (trẻ nhỏ gờ đá cột mốc) dễ bị bỏ sót trong điểm mù","Tình huống lùi xe có điểm mù lớn và rủi ro cán phải vật thể thấp; cần tăng mẫu ca khó để thuật toán không miss vật thể nguy hiểm"
+left,normal,20,"Độ méo thấu kính fisheye ở rìa hông xe làm cong biến dạng hình học phương tiện song song","Giám sát khoảng cách làn đường và các phương tiện chạy cùng chiều bên sườn trái ở điều kiện tiêu chuẩn"
+left,hard,25,"Xe máy vượt ép sát sườn trong điểm mù; biến dạng hình học cực đại tại vùng seam giao với camera trước/sau; bóng đổ thân xe ego","Sườn trái là hướng phương tiện thường vượt với tốc độ cao; cần kiểm soát sai số bounding box bị kéo dãn ở rìa thấu kính"
+right,normal,20,"Biến dạng quang học fisheye khi quan sát lề đường và dải phân cách; ánh sáng lệch hướng","Đánh giá khả năng bám vệt di chuyển của phương tiện sườn phụ ở khoảng cách an toàn khi lưu thông thẳng"
+right,hard,25,"Người đi bộ từ vỉa hè bước xuống ngõ khuất; xe hai bánh luồn lách bên phải khi xe rẽ phụ; seam overlap phức tạp với camera trước","Điểm mù bên phụ rất lớn với tài xế khi chuyển hướng/tấp lề; cần mẫu ca khó để đảm bảo không sót người đi bộ sát thân xe"
